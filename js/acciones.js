@@ -4,7 +4,7 @@ document.addEventListener("deviceready",function(){
 	$("#boton1").on("tap", function (){
 		$.ajax({
 			type:"POST", 
-			url:"http://192.168.1.68/ferreteria/buscarTodos.php",
+			url:"http://192.168.1.35/ferreteria/buscarTodos.php",
 			error: function(){
 			 alert ('No se Puedo Conectar  a la Base de Datos');
 			}, 
@@ -15,7 +15,7 @@ document.addEventListener("deviceready",function(){
 		
 			for (var x= 0; x<datosProducto.productos.length; x++)
 			{
-				$('#contenido').append('<div><div><div style="display:inline-block"><img src="http://192.168.1.68/ferreteria/recursos/imagenes/fotos/'+datosProducto.productos[x].claveProducto+'.jpg" width="90"></div><div style="display:inline-block"><h1>'+ datosProducto.productos[x].nombreProducto +' </h1><h2> '+datosProducto.productos[x].marcaProducto+' </h2></div></div><div><h2>Precio Unitario: '+datosProducto.productos[x].precioUnitario+' </h2><h2>Precio Mayoreo: '+datosProducto.productos[x].precioMayoreo+' </h2></div></div>');
+				$('#contenido').append('<div><div><div style="display:inline-block"><img src="http://192.168.1.35/ferreteria/recursos/imagenes/fotos/'+datosProducto.productos[x].claveProducto+'.jpg" width="90"></div><div style="display:inline-block"><h1>'+ datosProducto.productos[x].nombreProducto +' </h1><h2> '+datosProducto.productos[x].marcaProducto+' </h2></div></div><div><h2>Precio Unitario: '+datosProducto.productos[x].precioUnitario+' </h2><h2>Precio Mayoreo: '+datosProducto.productos[x].precioMayoreo+' </h2></div></div>');
 			}
 				$(':mobile-pagecontainer').pagecontainer('change', '#PaginaMI',{
 				transition: 'pop'
@@ -30,7 +30,7 @@ document.addEventListener("deviceready",function(){
 		$.ajax({
 			type:"POST",
 			 
-			url:"http://192.168.1.68/ferreteria/buscarProductos.php",
+			url:"http://192.168.1.35/ferreteria/buscarProductos.php",
 			data: "producto=" + $('#txtnombre').val(), 
 			error: function(){
 			 alert ('No se Puedo Conectar  a la Base de Datos');
@@ -42,7 +42,7 @@ document.addEventListener("deviceready",function(){
 		
 			for (var x= 0; x<datosProductos.productos.length; x++)
 			{
-				$('#contenidopro').append('<div><div><div style="display:inline-block"><img src="http://192.168.1.68/ferreteria/recursos/imagenes/fotos/'+datosProductos.productos[x].claveProducto+'.jpg" width="90"></div><div style="display:inline-block"><h1>'+ datosProductos.productos[x].nombreProducto +' </h1><h2> '+datosProductos.productos[x].marcaProducto+' </h2></div></div><div><h2>Precio Unitario: '+datosProductos.productos[x].precioUnitario+' </h2><h2>Precio Mayoreo: '+datosProductos.productos[x].precioMayoreo+' </h2></div></div>');
+				$('#contenidopro').append('<div><div><div style="display:inline-block"><img src="http://192.168.1.35/ferreteria/recursos/imagenes/fotos/'+datosProductos.productos[x].claveProducto+'.jpg" width="90"></div><div style="display:inline-block"><h1>'+ datosProductos.productos[x].nombreProducto +' </h1><h2> '+datosProductos.productos[x].marcaProducto+' </h2></div></div><div><h2>Precio Unitario: '+datosProductos.productos[x].precioUnitario+' </h2><h2>Precio Mayoreo: '+datosProductos.productos[x].precioMayoreo+' </h2></div></div>');
 			}
 				$(':mobile-pagecontainer').pagecontainer('change', '#productos',{
 				transition: 'pop'
@@ -56,7 +56,7 @@ document.addEventListener("deviceready",function(){
 		$("#btn_marca").on("tap", function (){
 		$.ajax({
 			type:"POST", 
-			url:"http://192.168.1.68/ferreteria/buscarMarcas.php",
+			url:"http://192.168.1.35/ferreteria/buscarMarcas.php",
 			data: "marca=" + $('#txtmarca').val(),
 			error: function(){
 			 alert ('No se Puedo Conectar  a la Base de Datos');
@@ -68,7 +68,7 @@ document.addEventListener("deviceready",function(){
 		
 			for (var x= 0; x<datosMarca.marcas.length; x++)
 			{
-				$('#contenidomar').append('<div><div><div style="display:inline-block"><img src="http://192.168.1.68/ferreteria/recursos/imagenes/fotos/'+datosMarca.marcas[x].claveProducto+'.jpg" width="90"></div><div style="display:inline-block"><h1>'+ datosMarca.marcas[x].nombreProducto +' </h1><h2> '+datosMarca.marcas[x].marcaProducto+' </h2></div></div><div><h2>Precio Unitario: '+datosMarca.marcas[x].precioUnitario+' </h2><h2>Precio Mayoreo: '+datosMarca.marcas[x].precioMayoreo+' </h2></div></div>');
+				$('#contenidomar').append('<div><div><div style="display:inline-block"><img src="http://192.168.1.35/ferreteria/recursos/imagenes/fotos/'+datosMarca.marcas[x].claveProducto+'.jpg" width="90"></div><div style="display:inline-block"><h1>'+ datosMarca.marcas[x].nombreProducto +' </h1><h2> '+datosMarca.marcas[x].marcaProducto+' </h2></div></div><div><h2>Precio Unitario: '+datosMarca.marcas[x].precioUnitario+' </h2><h2>Precio Mayoreo: '+datosMarca.marcas[x].precioMayoreo+' </h2></div></div>');
 			}
 				$(':mobile-pagecontainer').pagecontainer('change', '#marcas',{
 				transition: 'pop'
